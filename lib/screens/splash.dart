@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Timer(Duration(seconds: 3), () {
       print("Moving away from SplashPage");
-      Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SettingsPage()));
     });
   }
 

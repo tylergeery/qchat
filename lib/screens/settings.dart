@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qchat/screens/settings/friends.dart';
+import 'package:qchat/screens/settings/options.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -8,11 +10,11 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
 
   void onFiltersPressed () {
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsOptionsPage()));
   }
 
   void onFriendsPressed() {
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsFriendsPage()));
   }
 
   @override
@@ -55,7 +57,7 @@ class _SettingsPageState extends State<SettingsPage> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Row(
+                  Column(
                     children: <Widget>[
                       Center(
                         child: RaisedButton(
@@ -65,7 +67,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       )
                     ],
                   ),
-                  Row(
+                  Column(
                     children: <Widget>[
                       Center(
                         child: RaisedButton(
